@@ -20,12 +20,9 @@
 // Code originally based on http://www.php-astux.info/script-compteur-telechargements.php
 
 require_once( __DIR__ . '/includes/AutoLoader.php' );
-$filesdir = 'Download/'; // // Path where the files to download are stored
 require_once( __DIR__ . '/includes/WebStart.php' );
-/**
- * Protect against register_globals vulnerabilities.
- * This line must be present before any global variable is referenced.
- */
+
+$filesdir = 'Download/'; // // Path where the files to download are stored
 
 // Get the filename argument
 $filename = ( isset( $_GET['f'] ) ) ? trim( sprintf( "%s", $_GET['f'] ) ) : '';
@@ -38,14 +35,14 @@ if ( $filename != '' ) { // It is not empty, okay.
 
 	// // Now execute the query
 	$db = wfGetDB( DB_MASTER );
-	$db->replace(
+	$db->insert(
 		'downloads_files',
 		array(
 			'filename' => $filename,
-			'downloaded = (downloaded+1)',
 			'last_download' => time(),
 		),
-		__METHOD__
+		__METHOD__,
+		array( "ON DUPLICATE KEY UPDATE downloaded = (downloaded+1), last_download = " . $db->addQuotes( time() ) )
 	);
 
 	// Query finish, send the file to the user
