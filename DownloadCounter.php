@@ -17,18 +17,19 @@
 # 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 # http://www.gnu.org/copyleft/gpl.html
 
-//http://www.php-astux.info/script-compteur-telechargements.php
-// Mini config
+// Code originally based on http://www.php-astux.info/script-compteur-telechargements.php
 
-$filesdir = 'Download/'; // Path where the files to download are stored
-
-/**
- * Protect against register_globals vulnerabilities.
- * This line must be present before any global variable is referenced.
- */
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die();
 }
+
+$wgExtensionCredits['parserhook'][] = array(
+	'name' => 'DownloadCounter',
+	'version' => '0.2',
+	'author' => 'Eric Petit',
+	'descriptionmsg' => 'downloadcounter-desc',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:DownloadCounter',
+);
 
 /**
  * @param $input
@@ -36,62 +37,53 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * @param $parser Parser
  * @return int|string
  */
-function AfficheDetailsTelechargements( $input, $argv, $parser ) {
+function DownloadCounter( $input, $argv, $parser ) {
 	$parser->disableCache();
 	$file = $argv['name'];
 	$details_type = $argv['type'];
 
-	$req_FileDetails = "SELECT
-					{CHAMP}
-				FROM
-					downloads_files
-				WHERE
-					filename='" . $file . "';";
-
 	// Read the number or the last date of a downloaded file
-	$req_FileDetails = ( $details_type == 'total' ) ?
-		str_replace( '{CHAMP}', 'downloaded', $req_FileDetails ) :
-		str_replace( '{CHAMP}', 'last_download', $req_FileDetails );
+	if ( $details_type == 'total' ) {
+		$var = 'downloaded';
+	} else {
+		$var = 'last_download';
+	}
 
 	// Execute the query and return the result
-	//$FileDetails = DatabaseMysql.query($req_FileDetails);//mysql_query($req_FileDetails);// or die($req_FileDetails.'<br />'.mysql_error());
 	$db = wfGetDB( DB_MASTER );
-	$FileDetails = $db->doQuery( $req_FileDetails ); // or die($req_FileDetails.'<br />'.mysql_error());
-
-	if ( mysql_num_rows( $FileDetails ) != 1 ) // File not found
-	{
+	$res = $db->selectRow(
+		'downloads_files',
+		$var,
+		array( 'filename' => $file ),
+		__METHOD__
+	);
+	if ( $db->numRows( $res ) !== 1 ) { // File not found
 		return 0;
-	} else // File found
-	{
-		$rs = mysql_fetch_array( $FileDetails );
-
-		return ( $details_type == 'total' ) ? $rs['downloaded'] : date( "d/m/Y H:i:s", $rs['last_download'] );
+	} else { // File found
+		return ( $details_type == 'total' ) ? $res->downloaded : date( "d/m/Y H:i:s", $res->last_download );
 	}
 }
 
-//Avoid unstubbing $wgParser on setHook() too early on modern (1.12+) MW versions, as per r35980
-if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
-	$wgHooks['ParserFirstCallInit'][] = 'wfDownloadCounter';
-} else {
-	$wgExtensionFunctions[] = 'wfDownloadCounter';
+$wgExtensionMessagesFiles['DownloadCounter'] = $dir . 'DownloadCounter.i18n.php';
+
+$wgHooks['ParserFirstCallInit'][] = 'wfDownloadCounter';
+$wgHooks['LoadExtensionSchemaUpdates'][] = 'efDownloadCounterchemaUpdates';
+
+/**
+ * @param $parser Parser
+ * @return bool
+ */
+function wfDownloadCounter( $parser ) {
+	$parser->setHook( 'DownloadCounter', 'DownloadCounter' );
+	return true;
 }
 
-$wgExtensionCredits['parserhook'][] = array(
-	'name' => 'DownloadCounter',
-	'version' => '0.1',
-	'author' => 'Eric Petit',
-	'description' => 'Allows the display of total and last download, Read download counter value',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:DownloadCounter',
-);
-
-function wfDownloadCounter() {
-	global $wgParser;
-	# register the extension with the WikiText parser
-	# the first parameter is the name of the new tag.
-	# In this case it defines the tag <dirlist> ... </dirlist>
-	# the second parameter is the callback function for
-	# processing the text between the tags
-	$wgParser->setHook( 'AfficheDetailsTelechargements', 'AfficheDetailsTelechargements' );
-	$wgParser->setHook( 'DownloadFs', 'DownloadFs' );
+/**
+ * @param $updater DatabaseUpdater
+ * @return bool
+ */
+function efDownloadCounterchemaUpdates( $updater ) {
+	$base = dirname( __FILE__ );
+	$updater->addExtensionTable( 'downloads_counter', "$base/DownloadCounter.sql" );
 	return true;
 }

@@ -17,11 +17,11 @@
 # 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 # http://www.gnu.org/copyleft/gpl.html
 
-//http://www.php-astux.info/script-compteur-telechargements.php
+// Code originally based on http://www.php-astux.info/script-compteur-telechargements.php
 
-require_once( dirname( '.' ) . '/includes/AutoLoader.php' );
+require_once( __DIR__ . '/includes/AutoLoader.php' );
 $filesdir = 'Download/'; // // Path where the files to download are stored
-require_once( dirname( '.' ) . '/includes/WebStart.php' );
+require_once( __DIR__ . '/includes/WebStart.php' );
 /**
  * Protect against register_globals vulnerabilities.
  * This line must be present before any global variable is referenced.
@@ -30,31 +30,25 @@ require_once( dirname( '.' ) . '/includes/WebStart.php' );
 // Get the filename argument
 $filename = ( isset( $_GET['f'] ) ) ? trim( sprintf( "%s", $_GET['f'] ) ) : '';
 
-if ( $filename != '' ) // It is not empty, okay.
-{
+if ( $filename != '' ) { // It is not empty, okay.
 	// WARNING : Check if the file exist
-	if ( ( file_exists( $filesdir . $filename ) ) && ( is_file( $filesdir . $filename ) ) ) {
-		// File is here, increment the counter
-		$req_augmenterdownload = "INSERT INTO `downloads_files` (
-        `filename` ,
-        `downloaded` ,
-        `last_download`
-        )
-        VALUES ('" . $filename . "', '(downloaded+1)', '" . time() . "')
-                     ON DUPLICATE KEY UPDATE
-						downloaded = (downloaded+1),
-						last_download = '" . time() . "',
-						filename='" . $filename . "';";
-
-
-		// // Now execute the query
-		$db = wfGetDB( DB_MASTER );
-		$FileDetails = $db->doQuery( $req_augmenterdownload ); // or die($req_FileDetails.'<br />'.mysql_error());
-
-		// Query finish, send the file to the user
-		header( "Location: " . $filesdir . $filename );
+	if ( !file_exists( $filesdir . $filename ) || !is_file( $filesdir . $filename ) ) {
 		exit();
 	}
-	;
+
+	// // Now execute the query
+	$db = wfGetDB( DB_MASTER );
+	$db->replace(
+		'downloads_files',
+		array(
+			'filename' => $filename,
+			'downloaded = (downloaded+1)',
+			'last_download' => time(),
+		),
+		__METHOD__
+	);
+
+	// Query finish, send the file to the user
+	header( "Location: " . $filesdir . $filename );
+	exit();
 }
-;
