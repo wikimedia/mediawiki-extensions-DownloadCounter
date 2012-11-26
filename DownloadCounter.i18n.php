@@ -48,6 +48,13 @@ $messages['gl'] = array(
 	'downloadcounter-desc' => 'Permite mostrar o número total de descargas e a data e hora da última descarga',
 );
 
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'downloadcounter-desc' => 'Zmóžnja cyłkownu ličbu sćehnjenjow a čas poslednjeho sćehnjenja zwobraznić',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
