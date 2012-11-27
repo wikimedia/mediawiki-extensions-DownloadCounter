@@ -90,6 +90,13 @@ $messages['mk'] = array(
 	'downloadcounter-desc' => 'Овозможува прикажување на вкупни досегашни подигања',
 );
 
+/** Dutch (Nederlands)
+ * @author Kippenvlees1
+ */
+$messages['nl'] = array(
+	'downloadcounter-desc' => 'Toont het totaal aan downloads en het tijdstip van de laatste download',
+);
+
 /** Ukrainian (українська)
  * @author Base
  */
