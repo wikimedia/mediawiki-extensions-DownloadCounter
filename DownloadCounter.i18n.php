@@ -20,6 +20,13 @@ $messages['qqq'] = array(
 	'downloadcounter-desc' => '{{desc|name=Download Counter|url=http://www.mediawiki.org/wiki/Extension:DownloadCounter}}',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'downloadcounter-desc' => 'Permite amosar el númberu de descargues totales y la hora de la cabera descarga',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
@@ -92,9 +99,10 @@ $messages['mk'] = array(
 
 /** Dutch (Nederlands)
  * @author Kippenvlees1
+ * @author Siebrand
  */
 $messages['nl'] = array(
-	'downloadcounter-desc' => 'Toont het totaal aan downloads en het tijdstip van de laatste download',
+	'downloadcounter-desc' => 'Maakt het mogelijk het aantal downloads en het tijdstip van de laatste download weer te geven',
 );
 
 /** Ukrainian (українська)
