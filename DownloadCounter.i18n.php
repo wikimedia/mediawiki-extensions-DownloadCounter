@@ -34,6 +34,13 @@ $messages['de'] = array(
 	'downloadcounter-desc' => 'Ermöglicht die Anzeige der Gesamtzahl der Downloads sowie des Datums des letzten Herunterladens',
 );
 
+/** Lower Sorbian (dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'downloadcounter-desc' => 'Zmóžnja cełkownu licbu ześěgnjenjow cas slědnego ześěgnjenja zwobrazniś',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  */
@@ -42,10 +49,11 @@ $messages['es'] = array(
 );
 
 /** French (français)
+ * @author Crochet.david
  * @author Gomoko
  */
 $messages['fr'] = array(
-	'downloadcounter-desc' => "Autorise l'affichage du total des téléchargements et l'heure du dernier téléchargement",
+	'downloadcounter-desc' => 'Autorise l’affichage du total des téléchargements et l’heure du dernier téléchargement',
 );
 
 /** Galician (galego)
