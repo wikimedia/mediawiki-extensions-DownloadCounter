@@ -63,6 +63,13 @@ $messages['gl'] = array(
 	'downloadcounter-desc' => 'Permite mostrar o número total de descargas e a data e hora da última descarga',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'downloadcounter-desc' => 'הצגת מספר ההורדות וזמן ההורדה האחרונה',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
