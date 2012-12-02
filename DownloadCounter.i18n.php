@@ -20,6 +20,13 @@ $messages['qqq'] = array(
 	'downloadcounter-desc' => '{{desc|name=Download Counter|url=http://www.mediawiki.org/wiki/Extension:DownloadCounter}}',
 );
 
+/** Arabic (العربية)
+ * @author Tux-tn
+ */
+$messages['ar'] = array(
+	'downloadcounter-desc' => 'يسمح بعرض عدد مرات التحميل ووقت التحميل الأخير',
+);
+
 /** Asturian (asturianu)
  * @author Xuacu
  */
