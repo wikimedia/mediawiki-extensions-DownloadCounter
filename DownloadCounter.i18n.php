@@ -127,6 +127,13 @@ $messages['nl'] = array(
 	'downloadcounter-desc' => 'Maakt het mogelijk het aantal downloads en het tijdstip van de laatste download weer te geven',
 );
 
+/** Swedish (svenska)
+ * @author WikiPhoenix
+ */
+$messages['sv'] = array(
+	'downloadcounter-desc' => 'Tillåter visning av totalt antal nedladdningar och tiden för den senaste nedladdningen',
+);
+
 /** Ukrainian (українська)
  * @author Base
  */
