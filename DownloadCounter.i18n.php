@@ -34,6 +34,13 @@ $messages['ast'] = array(
 	'downloadcounter-desc' => 'Permite amosar el númberu de descargues totales y la hora de la cabera descarga',
 );
 
+/** South Azerbaijani (تورکجه)
+ * @author Mousa
+ */
+$messages['azb'] = array(
+	'downloadcounter-desc' => 'بوتون اندیرمه‌لری و سون اندیرمه‌نین واختینی گؤسترمگه ایجازه وئرر',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
