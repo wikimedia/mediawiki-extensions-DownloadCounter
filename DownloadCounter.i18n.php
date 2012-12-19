@@ -147,3 +147,10 @@ $messages['sv'] = array(
 $messages['uk'] = array(
 	'downloadcounter-desc' => 'Дозволяє відображення загальне число завантажень і час останнього завантаження',
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Simon Shek
+ */
+$messages['zh-hant'] = array(
+	'downloadcounter-desc' => '允許顯示總下載量與上次下載的時間',
+);
