@@ -91,6 +91,13 @@ $messages['hsb'] = array(
 	'downloadcounter-desc' => 'Zmóžnja cyłkownu ličbu sćehnjenjow a čas poslednjeho sćehnjenja zwobraznić',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Farras
+ */
+$messages['id'] = array(
+	'downloadcounter-desc' => 'Menampilkan jumlah unduhan dan waktu unduhan terakhir',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
