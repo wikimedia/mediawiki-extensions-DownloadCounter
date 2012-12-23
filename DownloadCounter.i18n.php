@@ -141,6 +141,13 @@ $messages['nl'] = array(
 	'downloadcounter-desc' => 'Maakt het mogelijk het aantal downloads en het tijdstip van de laatste download weer te geven',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'downloadcounter-desc' => "A përmëtt ëd mosté ël total dle dëscarie e ël temp ëd l'ùltima dëscaria",
+);
+
 /** Swedish (svenska)
  * @author WikiPhoenix
  */
