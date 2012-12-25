@@ -141,11 +141,19 @@ $messages['nl'] = array(
 	'downloadcounter-desc' => 'Maakt het mogelijk het aantal downloads en het tijdstip van de laatste download weer te geven',
 );
 
+/** Polish (polski)
+ * @author Matma Rex
+ */
+$messages['pl'] = array(
+	'downloadcounter-desc' => 'Pozwala na wyświetlanie łącznej liczby pobrań i czasu ostatniego pobrania',
+);
+
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'downloadcounter-desc' => "A përmëtt ëd mosté ël total dle dëscarie e ël temp ëd l'ùltima dëscaria",
+	'downloadcounter-desc' => "A përmëtt ëd mostré ël total dle dëscarie e l'ora ëd l'ùltima dëscaria",
 );
 
 /** Swedish (svenska)
