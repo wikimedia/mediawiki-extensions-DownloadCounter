@@ -41,6 +41,13 @@ $messages['azb'] = array(
 	'downloadcounter-desc' => 'بوتون اندیرمه‌لری و سون اندیرمه‌نین واختینی گؤسترمگه ایجازه وئرر',
 );
 
+/** Danish (dansk)
+ * @author Tjernobyl
+ */
+$messages['da'] = array(
+	'downloadcounter-desc' => 'Tillader visning af samlede downloads og tidspunktet for den sidste download',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
@@ -156,6 +163,13 @@ $messages['pms'] = array(
 	'downloadcounter-desc' => "A përmëtt ëd mostré ël total dle dëscarie e l'ora ëd l'ùltima dëscaria",
 );
 
+/** Russian (русский)
+ * @author KPu3uC B Poccuu
+ */
+$messages['ru'] = array(
+	'downloadcounter-desc' => 'Позволяет отображение общего количества загрузок и время последней загрузки',
+);
+
 /** Swedish (svenska)
  * @author WikiPhoenix
  */
@@ -168,6 +182,13 @@ $messages['sv'] = array(
  */
 $messages['uk'] = array(
 	'downloadcounter-desc' => 'Дозволяє відображення загальне число завантажень і час останнього завантаження',
+);
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Hydra
+ */
+$messages['zh-hans'] = array(
+	'downloadcounter-desc' => '允许显示总下载量与上次下载的时间',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
