@@ -69,6 +69,13 @@ $messages['es'] = array(
 	'downloadcounter-desc' => 'Permite mostrar el número total de descargas y la hora de  la última descarga',
 );
 
+/** Finnish (suomi)
+ * @author VezonThunder
+ */
+$messages['fi'] = array(
+	'downloadcounter-desc' => 'Mahdollistaa latausten yhteismäärän sekä viime latauksen ajan näyttämisen',
+);
+
 /** French (français)
  * @author Crochet.david
  * @author Gomoko
