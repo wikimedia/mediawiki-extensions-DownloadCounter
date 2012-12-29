@@ -105,6 +105,13 @@ $messages['hsb'] = array(
 	'downloadcounter-desc' => 'Zmóžnja cyłkownu ličbu sćehnjenjow a čas poslednjeho sćehnjenja zwobraznić',
 );
 
+/** Hungarian (magyar)
+ * @author Dj
+ */
+$messages['hu'] = array(
+	'downloadcounter-desc' => 'Megjeleníthetővé teszi a letöltések teljes számát és a legutolsó letöltés idejét',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author Farras
  */
