@@ -154,6 +154,13 @@ $messages['mk'] = array(
 	'downloadcounter-desc' => 'Овозможува прикажување на вкупни досегашни подигања',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'downloadcounter-desc' => 'Membolehkan paparan jumlah muat turunan dan waktu muat turunan terakhir',
+);
+
 /** Dutch (Nederlands)
  * @author Kippenvlees1
  * @author Siebrand
