@@ -184,6 +184,13 @@ $messages['pms'] = array(
 	'downloadcounter-desc' => "A përmëtt ëd mostré ël total dle dëscarie e l'ora ëd l'ùltima dëscaria",
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'downloadcounter-desc' => "Permette de fà vedè 'u scarecaminde totale e 'u tiembe de l'urteme scarecamende",
+);
+
 /** Russian (русский)
  * @author KPu3uC B Poccuu
  */
