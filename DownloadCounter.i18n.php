@@ -207,9 +207,10 @@ $messages['sv'] = array(
 
 /** Ukrainian (українська)
  * @author Base
+ * @author Ата
  */
 $messages['uk'] = array(
-	'downloadcounter-desc' => 'Дозволяє відображення загальне число завантажень і час останнього завантаження',
+	'downloadcounter-desc' => 'Дозволяє відображення загального числа завантажень і часу останнього завантаження',
 );
 
 /** Simplified Chinese (中文（简体）‎)
