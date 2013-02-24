@@ -41,6 +41,13 @@ $messages['azb'] = array(
 	'downloadcounter-desc' => 'بوتون اندیرمه‌لری و سون اندیرمه‌نین واختینی گؤسترمگه ایجازه وئرر',
 );
 
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'downloadcounter-desc' => 'Дазваляе паказваць агульную колькасьць загрузак і час апошняй загрузкі',
+);
+
 /** Danish (dansk)
  * @author Tjernobyl
  */
