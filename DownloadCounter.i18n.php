@@ -76,6 +76,13 @@ $messages['es'] = array(
 	'downloadcounter-desc' => 'Permite mostrar el número total de descargas y la hora de  la última descarga',
 );
 
+/** Basque (euskara)
+ * @author Xabier Armendaritz
+ */
+$messages['eu'] = array(
+	'downloadcounter-desc' => 'Deskargak guztira zenbat izan diren eta azken deskarga noiz egin zen erakustea ahalbidetzen du',
+);
+
 /** Finnish (suomi)
  * @author VezonThunder
  */
