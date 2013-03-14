@@ -83,6 +83,13 @@ $messages['eu'] = array(
 	'downloadcounter-desc' => 'Deskargak guztira zenbat izan diren eta azken deskarga noiz egin zen erakustea ahalbidetzen du',
 );
 
+/** Persian (فارسی)
+ * @author Dalba
+ */
+$messages['fa'] = array(
+	'downloadcounter-desc' => 'امکان نمایش تعداد کل بارگیری‌ها و زمان آخرین بارگیری را فراهم می‌آورد.',
+);
+
 /** Finnish (suomi)
  * @author VezonThunder
  */
