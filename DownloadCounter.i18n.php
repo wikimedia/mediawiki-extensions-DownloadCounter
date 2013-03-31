@@ -161,6 +161,13 @@ $messages['ko'] = array(
 	'downloadcounter-desc' => '총 다운로드 수와 마지막 다운로드 시간을 보여주도록 허용',
 );
 
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'downloadcounter-desc' => 'Määd_et müjjelesch, de jesamp_Zahl eronger jelaae Datteije u de Duur vum läzde Erongerlaade aanzezeije.',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
