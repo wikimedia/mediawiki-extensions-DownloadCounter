@@ -189,6 +189,12 @@ $messages['ms'] = array(
 	'downloadcounter-desc' => 'Membolehkan paparan jumlah muat turunan dan waktu muat turunan terakhir',
 );
 
+/** Norwegian Bokmål (norsk bokmål)
+ */
+$messages['nb'] = array(
+	'downloadcounter-desc' => 'Viser totalt antall nedlastinger og tidspunktet for forrige nedlasting',
+);
+
 /** Dutch (Nederlands)
  * @author Kippenvlees1
  * @author Siebrand
