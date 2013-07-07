@@ -48,6 +48,13 @@ $messages['be-tarask'] = array(
 	'downloadcounter-desc' => 'Дазваляе паказваць агульную колькасьць загрузак і час апошняй загрузкі',
 );
 
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
+$messages['cy'] = array(
+	'downloadcounter-desc' => 'Yn galluogi dangos cyfanswm yr islwythiadau ac amser yr islwythiad diwethaf',
+);
+
 /** Danish (dansk)
  * @author Tjernobyl
  */
