@@ -140,6 +140,13 @@ $messages['hu'] = array(
 	'downloadcounter-desc' => 'Megjeleníthetővé teszi a letöltések teljes számát és a legutolsó letöltés idejét',
 );
 
+/** Interlingua (interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'downloadcounter-desc' => 'Permitte presentar le total de discargamentos e le hora del ultime discargamento',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author Farras
  */
