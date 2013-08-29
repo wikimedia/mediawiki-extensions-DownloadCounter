@@ -217,6 +217,13 @@ $messages['nl'] = array(
 	'downloadcounter-desc' => 'Maakt het mogelijk het aantal downloads en het tijdstip van de laatste download weer te geven',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'downloadcounter-desc' => 'Autoriza l’afichatge del total dels telecargaments e l’ora del darrièr telecargament',
+);
+
 /** Polish (polski)
  * @author Matma Rex
  */
