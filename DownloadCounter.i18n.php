@@ -239,6 +239,13 @@ $messages['pms'] = array(
 	'downloadcounter-desc' => "A përmëtt ëd mostré ël total dle dëscarie e l'ora ëd l'ùltima dëscaria",
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
+ */
+$messages['pt-br'] = array(
+	'downloadcounter-desc' => 'Permite a exibição do total de downloads e o tempo do último download',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
