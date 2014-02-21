@@ -260,6 +260,13 @@ $messages['ru'] = array(
 	'downloadcounter-desc' => 'Позволяет отображение общего количества загрузок и время последней загрузки',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'downloadcounter-desc' => 'Permits the display o total downloads an the time o the last download',
+);
+
 /** Swedish (svenska)
  * @author WikiPhoenix
  */
