@@ -264,7 +264,7 @@ $messages['ru'] = array(
  * @author John Reid
  */
 $messages['sco'] = array(
-	'downloadcounter-desc' => 'Permits the display o total downloads an the time o the last download',
+	'downloadcounter-desc' => 'Permits the displey o total doonlaids n the time o the laist doonlaid',
 );
 
 /** Swedish (svenska)
