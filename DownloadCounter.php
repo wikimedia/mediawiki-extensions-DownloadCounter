@@ -25,7 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wgExtensionCredits['parserhook'][] = array(
 	'name' => 'DownloadCounter',
-	'version' => '0.2',
+	'version' => '0.3.0',
 	'author' => 'Eric Petit',
 	'descriptionmsg' => 'downloadcounter-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:DownloadCounter',
@@ -64,6 +64,7 @@ function DownloadCounter( $input, $argv, $parser ) {
 	}
 }
 
+$wgMessagesDirs['DownloadCounter'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['DownloadCounter'] = $dir . 'DownloadCounter.i18n.php';
 
 $wgHooks['ParserFirstCallInit'][] = 'wfDownloadCounter';
