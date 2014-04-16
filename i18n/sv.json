@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "WikiPhoenix"
-        ]
-    },
-    "downloadcounter-desc": "Tillåter visning av totalt antal nedladdningar och tiden för den senaste nedladdningen"
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"downloadcounter-desc": "Tillåter visning av totalt antal nedladdningar och tiden för den senaste nedladdningen"
 }

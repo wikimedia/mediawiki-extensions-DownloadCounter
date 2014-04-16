@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dj"
-        ]
-    },
-    "downloadcounter-desc": "Megjeleníthetővé teszi a letöltések teljes számát és a legutolsó letöltés idejét"
+	"@metadata": {
+		"authors": [
+			"Dj"
+		]
+	},
+	"downloadcounter-desc": "Megjeleníthetővé teszi a letöltések teljes számát és a legutolsó letöltés idejét"
 }

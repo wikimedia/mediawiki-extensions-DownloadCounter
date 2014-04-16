@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Wizardist"
-        ]
-    },
-    "downloadcounter-desc": "Дазваляе паказваць агульную колькасьць загрузак і час апошняй загрузкі"
+	"@metadata": {
+		"authors": [
+			"Wizardist"
+		]
+	},
+	"downloadcounter-desc": "Дазваляе паказваць агульную колькасьць загрузак і час апошняй загрузкі"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Xuacu"
-        ]
-    },
-    "downloadcounter-desc": "Permite amosar el númberu de descargues totales y la hora de la cabera descarga"
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"downloadcounter-desc": "Permite amosar el númberu de descargues totales y la hora de la cabera descarga"
 }
