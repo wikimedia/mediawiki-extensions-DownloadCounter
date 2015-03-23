@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki"
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
-	"downloadcounter-desc": "{{desc|name=Download Counter|url=http://www.mediawiki.org/wiki/Extension:DownloadCounter}}"
+	"downloadcounter-desc": "{{desc|name=Download Counter|url=https://www.mediawiki.org/wiki/Extension:DownloadCounter}}"
 }
