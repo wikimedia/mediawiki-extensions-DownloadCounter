@@ -1,9 +1,10 @@
 -- Create the table : 'downloads_files'
 
-CREATE TABLE /*_*/downloads_files (
-  filename      VARCHAR(255) NOT NULL, -- I guess, file name is unique ;o)
-  downloaded    INT(5)       NOT NULL DEFAULT 0, -- By default, downloaded 0 time (could be 1)
-  last_download INT(5)       NOT NULL DEFAULT 0, -- By default, downloaded 0 time (could be 1)
-
-PRIMARY KEY(filename)
+CREATE TABLE IF NOT EXISTS /*_*/downloads_files (
+  -- I guess, file name is unique
+  filename      INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  -- By default, downloaded 0 time (could be 1)
+  downloaded    INT(5)       NOT NULL DEFAULT 0,
+  -- By default, downloaded 0 time (could be 1)
+  last_download INT(5)       NOT NULL DEFAULT 0
 ) /*$wgDBTableOptions*/;

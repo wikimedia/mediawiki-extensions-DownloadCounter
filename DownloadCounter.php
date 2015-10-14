@@ -85,6 +85,6 @@ function wfDownloadCounter( $parser ) {
  */
 function efDownloadCounterchemaUpdates( $updater ) {
 	$base = dirname( __FILE__ );
-	$updater->addExtensionTable( 'downloads_counter', "$base/DownloadCounter.sql" );
+	$updater->addExtensionTable( 'downloads_files', "$base/DownloadCounter.sql" );
 	return true;
 }
