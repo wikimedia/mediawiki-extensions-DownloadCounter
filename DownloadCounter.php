@@ -65,7 +65,6 @@ function DownloadCounter( $input, $argv, $parser ) {
 }
 
 $wgMessagesDirs['DownloadCounter'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['DownloadCounter'] = $dir . 'DownloadCounter.i18n.php';
 
 $wgHooks['ParserFirstCallInit'][] = 'wfDownloadCounter';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'efDownloadCounterchemaUpdates';
