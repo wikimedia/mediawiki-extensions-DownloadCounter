@@ -19,8 +19,8 @@
 
 // Code originally based on http://www.php-astux.info/script-compteur-telechargements.php
 
-require_once( __DIR__ . '/includes/AutoLoader.php' );
-require_once( __DIR__ . '/includes/WebStart.php' );
+require_once( __DIR__ . '/../../includes/AutoLoader.php' );
+require_once( __DIR__ . '/../../includes/WebStart.php' );
 
 $filesdir = 'Download/'; // // Path where the files to download are stored
 
