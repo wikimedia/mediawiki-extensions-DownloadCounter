@@ -24,6 +24,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 $wgExtensionCredits['parserhook'][] = array(
+	'path' => __FILE__,
 	'name' => 'DownloadCounter',
 	'version' => '0.3.0',
 	'author' => 'Eric Petit',
@@ -83,7 +84,6 @@ function wfDownloadCounter( $parser ) {
  * @return bool
  */
 function efDownloadCounterchemaUpdates( $updater ) {
-	$base = dirname( __FILE__ );
-	$updater->addExtensionTable( 'downloads_files', "$base/DownloadCounter.sql" );
+	$updater->addExtensionTable( 'downloads_files', __DIR__ . '/DownloadCounter.sql' );
 	return true;
 }
