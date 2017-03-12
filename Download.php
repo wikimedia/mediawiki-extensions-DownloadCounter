@@ -19,7 +19,7 @@
 
 // Code originally based on http://www.php-astux.info/script-compteur-telechargements.php
 
-require_once( __DIR__ . '/../../includes/AutoLoader.php' );
+putenv( 'MW_INSTALL_PATH=' .  __DIR__ . "/../../" );
 require_once( __DIR__ . '/../../includes/WebStart.php' );
 
 $filesdir = 'Download/'; // // Path where the files to download are stored
@@ -29,7 +29,14 @@ $filename = ( isset( $_GET['f'] ) ) ? trim( sprintf( "%s", $_GET['f'] ) ) : '';
 
 if ( $filename != '' ) { // It is not empty, okay.
 	// WARNING : Check if the file exist
+	if ( strcspn( $filename, ":/\\\000\n\r" ) !== strlen( $filename ) ) {
+		header("HTTP/1.1 400 Evil Character");
+		echo "File name cannot contain special characters like colons or slashes.";
+		exit();
+	}
 	if ( !file_exists( $filesdir . $filename ) || !is_file( $filesdir . $filename ) ) {
+		header("HTTP/1.0 404 Not Found");
+		echo "File not found";
 		exit();
 	}
 
@@ -48,4 +55,6 @@ if ( $filename != '' ) { // It is not empty, okay.
 	// Query finish, send the file to the user
 	header( "Location: " . $filesdir . $filename );
 	exit();
+} else {
+	header("HTTP/1.1 400 Bad Request");
 }

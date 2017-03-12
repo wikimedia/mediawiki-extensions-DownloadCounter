@@ -26,7 +26,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'DownloadCounter',
-	'version' => '0.3.0',
+	'version' => '0.4.0',
 	'author' => 'Eric Petit',
 	'descriptionmsg' => 'downloadcounter-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:DownloadCounter',
@@ -61,7 +61,7 @@ function DownloadCounter( $input, $argv, $parser ) {
 	if ( $db->numRows( $res ) !== 1 ) { // File not found
 		return 0;
 	} else { // File found
-		return ( $details_type == 'total' ) ? $res->downloaded : date( "d/m/Y H:i:s", $res->last_download );
+		return ( $details_type == 'total' ) ? htmlspecialchars( $res->downloaded ) : htmlspecialchars( date( "d/m/Y H:i:s", $res->last_download ) );
 	}
 }
 
