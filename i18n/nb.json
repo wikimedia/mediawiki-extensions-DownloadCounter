@@ -1,4 +1,8 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
 	"downloadcounter-desc": "Viser totalt antall nedlastinger og tidspunktet for forrige nedlasting"
 }
