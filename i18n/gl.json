@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño"
+			"Toliño",
+			"Elisardojm"
 		]
 	},
-	"downloadcounter-desc": "Permite mostrar o número total de descargas e a data e hora da última descarga"
+	"downloadcounter-desc": "Permite amosar o número total de descargas e a data e hora da última descarga"
 }
