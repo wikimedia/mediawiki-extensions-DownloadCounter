@@ -30,6 +30,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'author' => 'Eric Petit',
 	'descriptionmsg' => 'downloadcounter-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:DownloadCounter',
+	'license-name' => 'GPL-2.0-or-later' // GNU General Public License v2.0 or later
 );
 
 /**
