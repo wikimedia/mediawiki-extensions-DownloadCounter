@@ -40,7 +40,7 @@ $wgExtensionCredits['parserhook'][] = array(
  * @return int|string
  */
 function DownloadCounter( $input, $argv, $parser ) {
-	$parser->disableCache();
+	$parser->getOutput()->updateCacheExpiry( 0 );
 	$file = $argv['name'];
 	$details_type = $argv['type'];
 
